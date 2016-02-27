@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<!--
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+-->
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+
+        <title>Phonegap</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script type="text/javascript" src="cordova.js"></script>
+
+
+    </head>
+    <body>
+    	<h3>Phonegap app</h3>
+        
+        <div id="GoogleMap"></div>
+
+	    <p id="cameraTxt">Upload a photo from your mobile or take a new photo:</p>
+	    <button name="cameraBtn" onclick="capturePhotoWithDataUrl();">Take a new photo</button> <br>
+	    <button name="cameraBtn" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">
+	    	Choose existing photo</button><br><br>
+	    <img id="uploadedPhoto" src="" />
+
+	    <button id="postOnTwitterBtn" onclick="postOnTwitter()"> Post on Twitter</button>
+
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/camera.js"></script>
+        <script type="text/javascript" src="js/twitter.js"></script>
+        <script type="text/javascript" src="js/SocialSharing.js"></script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcryxZDvlp3IQKUWGaqEJu_5LmKgoLCXQ"> </script>
+
+    </body>
+</html>
