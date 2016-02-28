@@ -38,6 +38,7 @@
         image.src = imageURI;
 
         showTwitterBtn();
+        showSaveBtn(imageURI);
 
     }
 
