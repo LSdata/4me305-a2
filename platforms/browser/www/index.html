@@ -13,29 +13,29 @@
 
         <title>Phonegap</title>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
 
 
     </head>
     <body>
-    	<h3>Phonegap app</h3>
+        <h3>Phonegap app</h3>
         
         <div id="GoogleMap"></div>
 
-	    <p id="cameraTxt">Upload a photo from your mobile or take a new photo:</p>
-	    <button name="cameraBtn" onclick="capturePhotoWithDataUrl();">Take a new photo</button> <br>
-	    <button name="cameraBtn" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">
-	    	Choose existing photo</button><br><br>
-	    <img id="uploadedPhoto" src="" />
+        <p id="cameraTxt">Upload a photo from your mobile or take a new photo:</p>
+        <button name="cameraBtn" onclick="capturePhotoWithDataUrl();">Take a new photo</button> <br>
+        <button name="cameraBtn" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">
+            Choose existing photo</button><br><br>
+        <img id="uploadedPhoto" src="" />
 
-	    <button id="postOnTwitterBtn" onclick="postOnTwitter()"> Post on Twitter</button>
+<button id="postOnTwitterBtn" onclick="window.plugins.socialsharing.shareViaTwitter('Add a comment')">Post on Twitter</button>
+<button id="saveImg" onclick="saveImg()">Save in phone</button>
 
-	    <button onclick="window.plugins.socialsharing.shareViaTwitter('Message via Twitter')">message via Twitter</button>
 
 
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/camera.js"></script>
-        <script type="text/javascript" src="js/twitter.js"></script>
+        <script type="text/javascript" src="js/uploadedImg"></script>
         <script type="text/javascript" src="js/SocialSharing.js"></script>
 
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcryxZDvlp3IQKUWGaqEJu_5LmKgoLCXQ"> </script>

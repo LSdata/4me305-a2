@@ -41,7 +41,7 @@
 
     }
 
-    // called from corresponding button
+    // the corresponding button will call this function
     function capturePhotoWithDataUrl() {
         navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, 
             destinationType: Camera.DestinationType.DATA_URL,//FILE_URI, 
@@ -49,7 +49,7 @@
         });
     }
     
-    // this function is called when button pressed. source: PHOTOLIBRARY
+    // the corresponding button will call this function. source: PHOTOLIBRARY
     function getPhoto(source) {
 
       // Retrieve image file location from specified source parameter PHOTOLIBRARY

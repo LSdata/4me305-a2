@@ -38,8 +38,8 @@ h3{
 }
 
 #uploadedPhoto{
-    max-height: 40%; 
-    width: auto;
+    max-height: auto;
+    width: 70%;
     display: none;
     padding-bottom: 20px;
 
@@ -50,7 +50,12 @@ h3{
     color: red;
     font-size:12px;
 }
-
+#saveImg{
+    visibility: hidden;
+    text-transform: none;
+    color: purple;
+    font-size:12px;
+}
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;
