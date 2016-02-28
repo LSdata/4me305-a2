@@ -6,7 +6,7 @@ function showTwitterBtn(){
 }
 
 function saveImg(){
-    var postTwBtn = document.getElementById('saveImg');
-    postTwBtn.style.visibility = 'visible';
+    var img = document.getElementById('saveImg');
+    img.style.visibility = 'visible';
 
 }
