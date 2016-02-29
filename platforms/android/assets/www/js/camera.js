@@ -24,6 +24,8 @@
         image.src = "data:image/jpeg;base64," + imageData; //the image file in base64
 
         showTwitterBtn();
+        showSaveBtn(imageData);
+
     }
     // Called when a photo is successfully retrieved
     //
@@ -45,7 +47,7 @@
     // the corresponding button will call this function
     function capturePhotoWithDataUrl() {
         navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, 
-            destinationType: Camera.DestinationType.DATA_URL,//FILE_URI, 
+            destinationType: Camera.DestinationType.DATA_URL,//Return base64 encoded string
             saveToPhotoAlbum: true
         });
     }

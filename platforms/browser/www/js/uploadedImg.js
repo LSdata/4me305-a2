@@ -15,10 +15,6 @@ function showSaveBtn(imageURI){
 }
 
 function saveImg(){
-    window.plugins.socialsharing.saveToPhotoAlbum(
-        ['https://www.google.nl/images/srpr/logo4w.png','www/image.gif'],
-        onSuccess, // optional success function
-        onError    // optional error function
-    );
+    window.plugins.socialsharing.saveToPhotoAlbum([newImg]);
     alert("ok, saved");
 }
