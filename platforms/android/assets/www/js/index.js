@@ -1,4 +1,6 @@
 
+var longitude;
+var latitude;
 
 var app = {
     // Application Constructor
@@ -24,8 +26,8 @@ var app = {
 
 
     onSuccess: function(position){
-        var longitude = position.coords.longitude;
-        var latitude = position.coords.latitude;
+        longitude = position.coords.longitude;
+        latitude = position.coords.latitude;
         var latLong = new google.maps.LatLng(latitude, longitude);
 
         var mapOptions = {

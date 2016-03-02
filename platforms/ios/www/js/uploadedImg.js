@@ -2,19 +2,19 @@
 var newImg;
 
 function showTwitterBtn(){
-  var postTwBtn = document.getElementById('postOnTwitterBtn');
-  postTwBtn.style.visibility = 'visible';
+    var postTwBtn = document.getElementById('postOnTwitterBtn');
+    postTwBtn.style.visibility = 'visible';
+    
 }
 
-function showSaveBtn(imageURI){
-    var img = document.getElementById('saveImg');
+function showDivIfPhoto(imageURI){
+    var img = document.getElementById('showDivIfPhoto');
     img.style.visibility = 'visible';
     
     newImg = imageURI;
-
 }
 
-function saveImg(){
-    window.plugins.socialsharing.saveToPhotoAlbum([newImg]);
-    alert("ok, saved");
+function postOnTwitter(){
+    window.plugins.socialsharing.shareViaTwitter('Add a comment here', newImg, null, null);
+    
 }

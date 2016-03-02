@@ -23,8 +23,8 @@
       // Show the captured photo
         image.src = "data:image/jpeg;base64," + imageData; //the image file in base64
 
-        showTwitterBtn();
-        showSaveBtn(imageData);
+        //showTwitterBtn(imageData);
+        showDivIfPhoto(imageData);
 
     }
     // Called when a photo is successfully retrieved
@@ -35,16 +35,16 @@
         // Get image handle
         var image = document.getElementById('uploadedPhoto');
 
-          // Unhide image elements
+        // Unhide image elements
         image.style.display = 'block';
         image.src = imageURI;
 
-        showTwitterBtn();
-        showSaveBtn(imageURI);
+        //showTwitterBtn(imageURI);
+        showDivIfPhoto(imageURI);
 
     }
 
-    // the corresponding button will call this function
+    // called from button. A new photo can be captured and saves in base64/png.
     function capturePhotoWithDataUrl() {
         navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, 
             destinationType: Camera.DestinationType.DATA_URL,//Return base64 encoded string
@@ -52,7 +52,7 @@
         });
     }
     
-    // the corresponding button will call this function. source: PHOTOLIBRARY
+    // called from button. Gets photo from the phone photo library. source: PHOTOLIBRARY
     function getPhoto(source) {
 
       // Retrieve image file location from specified source parameter PHOTOLIBRARY
