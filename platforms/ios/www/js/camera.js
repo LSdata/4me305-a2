@@ -13,7 +13,8 @@
     
     // Called when a photo is successfully retrieved
     function onPhotoDataSuccess(imageData) {
-      
+        console.log(imageData);
+
       // Get image handle
       var image = document.getElementById('uploadedPhoto');
 
@@ -21,14 +22,14 @@
       image.style.display = 'block';
 
       // Show the captured photo
-        image.src = "data:image/jpeg;base64," + imageData; //the image file in base64
+        //image.src = "data:image/jpeg;base64," + imageData; //the image file in base64
+        image.src = imageData;
 
         //showTwitterBtn(imageData);
         showDivIfPhoto(imageData);
 
     }
-    // Called when a photo is successfully retrieved
-    //
+    // Called when a photo is retrieved
     function onPhotoURISuccess(imageURI) {
         console.log(imageURI);
 
@@ -47,7 +48,7 @@
     // called from button. A new photo can be captured and saves in base64/png.
     function capturePhotoWithDataUrl() {
         navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, 
-            destinationType: Camera.DestinationType.DATA_URL,//Return base64 encoded string
+            destinationType: Camera.DestinationType.FILE_URI,//DATA_URL
             saveToPhotoAlbum: true
         });
     }
@@ -59,7 +60,6 @@
       navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, 
         destinationType: destinationType.FILE_URI,
         sourceType: source,
-        //mediaType: Camera.MediaType.ALLMEDIA //videos also
         });
     }
 
